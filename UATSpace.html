@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!--
+    This is my UAT Space Page.
+    It was created in my CSC102 class from Spring 2023.
+    This is for my week 4 blastoff assignment.
+    
+    Created by: Emily Parra
+    emikello@uat.edu
+-->
+<html>
+
+<head>
+    <title>
+        Emily's UATSpace Page
+    </title>
+    <!--
+        These lines of code call my JavaScript files into the HTML
+        file for referencing.
+        They also create the table needed for the Data Type and Reading
+        values below.
+    -->
+    <script src="code.js"></script>
+    <script src="code2.js"></script>
+    <link rel="stylesheet" href="UATSpaceStyle.css">
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid white;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="UATSpaceLogo.jpg">
+    <h1>
+        Welcome to the UAT Space Page!
+    </h1>
+    <!-- This is my audio section, it allows my website's visitors 
+        to play space music while navigating my site!
+        
+        Notes:
+        audio controls - allows the user to play, pause, and control volume for audio.
+        Credit for audio: penguinmusic @ https://pixabay.com/music/search/space/
+    -->
+    <h4>
+        Audio: Space Atmospheric Background by penguinmusic
+    </h4>
+    <audio controls>
+        <source src="space-chillout-14194.mp3" type="audio/mpeg">
+    </audio>
+    <br>
+    <br>
+    <br>
+    <!--
+        This is the code for my launch data table.
+        There are two columns, Data Type and Reading, as well as several rows.
+        The rows contain data types (tr) and readings (td) for the space 
+        launch which fall under their corresponding columns.
+    -->
+    <h2>
+        Launch Data:
+    </h2>
+    <table id="data" style="width:75%">
+        <header>
+            <thead>
+                <th style="width:50%">Data Type</th>
+                <th>Reading</th>
+            </thead>
+        </header>
+        <tr>
+            <td>Time Elapsed</td>
+            <td>15 seconds</td>
+        </tr>
+        <tr>
+            <td>Latitude</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Longitude</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>GPS Altitude</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>BMP Sensor Altitude</td>
+            <td>30383.04</td>
+        </tr>
+        <tr>
+            <td>BMP Sensor Pressure</td>
+            <td>2.34</td>
+        </tr>
+        <tr>
+            <td>BMP Sensor Temperature</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Digital Sensor Temperature</td>
+            <td>24.12</td>
+        </tr>
+        <tr>
+            <td>CSS Sensor Temperature</td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td>CSS Sensor eCO2</td>
+            <td>400</td>
+        </tr>
+        <tr>
+            <td>CSS Sensor TVOC</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>UV</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Accel X</td>
+            <td>-0.87</td>
+        </tr>
+        <tr>
+            <td>Accel Y</td>
+            <td>-0.02</td>
+        </tr>
+        <tr>
+            <td>Accel Z</td>
+            <td>9.61</td>
+        </tr>
+        <tr>
+            <td>Magnetic X</td>
+            <td>0.13</td>
+        </tr>
+        <tr>
+            <td>Magnetic Y</td>
+            <td>0.57</td>
+        </tr>
+        <tr>
+            <td>Magnetic Z</td>
+            <td>-0.24</td>
+        </tr>
+        <tr>
+            <td>Gyro X</td>
+            <td>4.66</td>
+        </tr>
+        <tr>
+            <td>Gyro Y</td>
+            <td>0.01</td>
+        </tr>
+        <tr>
+            <td>Gyro Z</td>
+            <td>-0.4</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <!--
+        This is my BlastOff Timer code. It includes a stop and start button
+        for the BlastOff Timer which counts down in increments of 5 seconds,
+        starting from 50 and ending at 0.
+    -->
+    <h2>Blastoff Timer</h2>
+    <div id="blastoffDis">Press start to begin the countdown.</div>
+    <br>
+    <br>
+    <button id="startButton" onclick="startButtonClick();">Start</button>
+    <button id="stopButton" onclick="stopButtonClick();">Stop</button>
+    <br>
+    <br>
+    <!--
+        This is the code for my Craps game and Sandbox. 
+        Users can play Craps while they wait for Blastoff.
+        The Sandbox is my designated area for experimentation with HTML.
+    -->
+    <h2>Craps Game</h2>
+    <div id="die1Res">Die 1 Result</div><br>
+    <div id="die2Res">Die 2 Result</div><br>
+    <div id="diceSum">Sum of die 1 and die 2</div><br>
+    <div id="gameRes">Game Result</div>
+    <br>
+    <button onclick="playCraps()">Play Craps!</button>
+    <br>
+    <br>
+    <h2>Sandbox</h2>
+    <br>
+    <div id="sandboxText"> Text to play with</div>
+    <script>
+        var phunText1 = "This is my ";
+        var phunText2 = "phun text.";
+        document.getElementById("sandboxText").innerHTML = phunText1 + phunText2;
+    </script>
+</body>
+
+</html>
